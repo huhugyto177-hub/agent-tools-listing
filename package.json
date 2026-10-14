@@ -1,0 +1,17 @@
+{
+  "name": "agent-tools-listing",
+  "version": "1.0.0",
+  "description": "A research-linked directory of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  }
+}
