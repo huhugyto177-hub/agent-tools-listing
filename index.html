@@ -32,6 +32,7 @@
       --accent: #246a52;
       --accent-soft: #eaf2ee;
       --accent-ink: #ffffff;
+      --dead: #b04a3a;
       --soft: #eff1ef;
       --code-bg: #161b18;
       --code-ink: #e6ece8;
@@ -48,6 +49,7 @@
         --accent: #85c9ad;
         --accent-soft: #1b2b24;
         --accent-ink: #0f1713;
+      --dead: #d08a8a;
         --soft: #1c201d;
         --code-bg: #090b0a;
         --code-ink: #e6ece8;
@@ -232,6 +234,7 @@
     .meta strong { display: block; margin-bottom: 4px; color: var(--ink); font-weight: 500; }
     .research-state { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; color: var(--accent); }
     .research-state::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+    .research-state.dead { color: var(--dead); }
     .go { margin-top: 6px; color: var(--muted); }
     .go:hover, .go:focus-visible { color: var(--accent); outline: none; }
     .go svg { width: 19px; height: 19px; }
@@ -459,7 +462,7 @@
     </section>
   </main>
 
-  <footer><div class="shell"><span>CATALOG SNAPSHOT · 2026-10-14</span><span>LINKS OPEN TO ORIGINAL RESEARCH SOURCES</span></div></footer>
+  <footer><div class="shell"><span>CATALOG SNAPSHOT · 2026-10-14</span><span id="lastChecked">LAST CHECKED · —</span><span>LINKS OPEN TO ORIGINAL RESEARCH SOURCES</span></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -637,6 +640,7 @@
     const categories = ["All", ...new Set(tools.map(t => t.category))];
     let activeCategory = "All";
     let query = "";
+      let linkStatus = {};
     const catalog = document.getElementById("catalog");
     const filters = document.getElementById("filters");
     const count = document.getElementById("count");
@@ -686,7 +690,11 @@
         catalog.innerHTML = `<div class="empty">No matches. Try another category or a broader search.</div>`;
         return;
       }
-      catalog.innerHTML = items.map(t => `
+      catalog.innerHTML = items.map(t => {
+        const st = linkStatus[t.name];
+        const stateLabel = st === "dead" ? "Source unreachable" : "Research-linked";
+        const stateClass = st === "dead" ? "research-state dead" : "research-state";
+        return `
         <article class="card">
           <div class="mark" aria-hidden="true">${safeText(t.short)}</div>
           <div>
@@ -695,14 +703,15 @@
             <div class="tags">${t.tags.map(tag => `<span class="tag">${safeText(tag)}</span>`).join("")}</div>
           </div>
           <div class="meta">
-            <div><strong>${safeText(t.category)} · ${safeText(t.type)}</strong><span>Use for: ${safeText(t.bestFor)}</span><span class="research-state">Research-linked</span></div>
+            <div><strong>${safeText(t.category)} · ${safeText(t.type)}</strong><span>Use for: ${safeText(t.bestFor)}</span><span class="${stateClass}">${stateLabel}</span></div>
             <div style="margin-top:10px"><strong>Caveat</strong><span>${safeText(t.caveat)}</span></div>
           </div>
           <a class="go" href="${t.source}" target="_blank" rel="noopener" aria-label="Open research source for ${safeText(t.name)}">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </article>
-      `).join("");
+      `;
+      }).join("");
     }
 
     function notify(message) {
@@ -744,8 +753,21 @@
     });
     document.head.appendChild(ld);
 
+    function loadStatus() {
+      fetch("status.json")
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          if (!data) return;
+          document.getElementById("lastChecked").textContent = "LAST CHECKED · " + data.checked_at;
+          (data.entries || []).forEach(e => { linkStatus[e.name] = e.status; });
+          render();
+        })
+        .catch(() => {});
+    }
+
     renderFilters();
     render();
+    loadStatus();
   </script>
 </body>
 </html>

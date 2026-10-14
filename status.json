@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-10-14",
+  "source": "automated daily link check (HTTP status only, not a delivery test)",
+  "entries": [
+    {
+      "name": "x402",
+      "source": "https://pondero.ai/agents/guides/x402-vs-acp-vs-ap2-agent-payment-protocols-october-2026/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Agent Payments Protocol (AP2)",
+      "source": "https://www.inriver.com/resources/ap2-mpp-x402-payment-protocols-agent-commerce/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Machine Payments Protocol (MPP)",
+      "source": "https://www.inriver.com/resources/ap2-mpp-x402-payment-protocols-agent-commerce/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "AgentCore Payments",
+      "source": "https://github.com/tatelyman/sample-agentcore-cloudfront-x402-payments",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Pinout",
+      "source": "https://github.com/hitakshia/pinout",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "ERC-8004",
+      "source": "https://blockeden.xyz/blog/2026/02/11/nillion-blacklight-ai-agent-verification/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Vouch",
+      "source": "https://dev.to/vouch/x402-proves-payment-it-doesnt-prove-trust-so-we-built-vouch-2fen",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "AgentCredit",
+      "source": "https://github.com/lazykid64/agentcredit/blob/HEAD/README.md",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "SpendVeto",
+      "source": "https://github.com/revanthrajeev/spendveto",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Virtuals Programmable Wallets",
+      "source": "https://cryptobriefing.com/virtuals-protocol-agent-wallet-prompt-injection/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "MCP Registry / Harbor",
+      "source": "https://github.com/lbesecker195/mcp_registry",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Agent2Agent (A2A)",
+      "source": "https://dev.to/jeff_pdc/a2a-vs-mcp-in-2026-when-agents-should-talk-to-agents-instead-of-calling-tools-4b9g",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "FetchGate Bazaar Audit",
+      "source": "https://github.com/roblouw2nd/fetchgate/blob/HEAD/content/x402-bazaar-october-2026.md",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Mem0",
+      "source": "https://yourstory.com/ai-story/san-francisco-startup-mem0-raises-24-million-long-term-ai-memory-power",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Zep / Graphiti",
+      "source": "https://valueaddvc.com/blog/the-ai-memory-problem-how-startups-are-solving-for-persistent-context",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Letta",
+      "source": "https://particula.tech/blog/agent-memory-frameworks-tested-mem0-zep-letta-cognee-2026",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Langfuse",
+      "source": "https://latitude.so/blog/best-ai-agent-observability-tools-2026-comparison",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Braintrust",
+      "source": "https://latitude.so/blog/best-ai-agent-observability-tools-2026-comparison",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Daytona",
+      "source": "https://github.com/imtiazrayhan/agentscamp/blob/HEAD/src/content/tools/daytona.md",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "E2B",
+      "source": "https://bex.co/blog/2026/10/02/e2b-vs-modal-vs-daytona-agent-sandboxes-vs-app-deploys",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Manifest by Manifold",
+      "source": "https://siliconangle.com/2026/05/12/manifold-scores-7700-mcp-servers-manifest-expansion-aimed-agent-security-teams/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Arcade",
+      "source": "https://github.com/druce/governance/blob/HEAD/wiki/vendors/arcade.md",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Aembit",
+      "source": "https://techstartups.com/2026/10/06/aembit-extends-access-controls-to-personal-ai-agents/",
+      "status": "live",
+      "http_status": 200
+    },
+    {
+      "name": "Okta for AI Agents",
+      "source": "https://www.forrester.com/blogs/oktane-2026-recap-okta-announces-a-unified-iam-control-plane-with-agent-governance-and-identity-details-remaining-unclear/",
+      "status": "live",
+      "http_status": 200
+    }
+  ]
+}
