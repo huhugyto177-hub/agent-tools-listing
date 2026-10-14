@@ -1,0 +1,344 @@
+{
+  "schema": "agent-tools-catalog/1.0",
+  "snapshot_date": "2026-10-14",
+  "verification": "research-linked, not live-verified",
+  "count": 24,
+  "tools": [
+    {
+      "name": "x402",
+      "category": "Payments",
+      "type": "Protocol",
+      "description": "HTTP-native fixed-price settlement for machine requests. A client receives 402 terms, pays in USDC through a facilitator, then retries with proof.",
+      "bestFor": "Per-request settlement",
+      "tags": [
+        "USDC",
+        "HTTP 402",
+        "fixed price"
+      ],
+      "caveat": "Settlement, not trust; not built for streaming payments.",
+      "source": "https://pondero.ai/agents/guides/x402-vs-acp-vs-ap2-agent-payment-protocols-october-2026/"
+    },
+    {
+      "name": "Agent Payments Protocol (AP2)",
+      "category": "Payments",
+      "type": "Protocol",
+      "description": "A mandate layer for proving that a human authorized an agent purchase envelope, using signed intent, cart and payment artifacts.",
+      "bestFor": "Purchase authorization",
+      "tags": [
+        "mandates",
+        "SD-JWT",
+        "authorization"
+      ],
+      "caveat": "AP2 authorizes; it does not move money.",
+      "source": "https://www.inriver.com/resources/ap2-mpp-x402-payment-protocols-agent-commerce/"
+    },
+    {
+      "name": "Machine Payments Protocol (MPP)",
+      "category": "Payments",
+      "type": "Protocol",
+      "description": "Stripe and Tempo\u2019s machine-to-machine settlement model, with charge and session intents and backward compatibility with x402.",
+      "bestFor": "Machine settlement sessions",
+      "tags": [
+        "sessions",
+        "stablecoins",
+        "HTTP 402"
+      ],
+      "caveat": "New in 2026; adoption and demand remain unproven.",
+      "source": "https://www.inriver.com/resources/ap2-mpp-x402-payment-protocols-agent-commerce/"
+    },
+    {
+      "name": "AgentCore Payments",
+      "category": "Payments",
+      "type": "Managed service",
+      "description": "AWS preview combining a managed wallet, session limits and payment audit for AWS agents, with Coinbase CDP or Stripe Privy integrations.",
+      "bestFor": "AWS-native agent payments",
+      "tags": [
+        "AWS",
+        "x402",
+        "MPP"
+      ],
+      "caveat": "Platform-locked and described as preview in the research.",
+      "source": "https://github.com/tatelyman/sample-agentcore-cloudfront-x402-payments"
+    },
+    {
+      "name": "Pinout",
+      "category": "Payments",
+      "type": "Reference project",
+      "description": "An implementation reference exploring the gap between one-shot x402 charges and metered or session-style billing.",
+      "bestFor": "Studying metered billing",
+      "tags": [
+        "metering",
+        "sessions",
+        "x402"
+      ],
+      "caveat": "The research characterizes this class as demos, not proven demand.",
+      "source": "https://github.com/hitakshia/pinout"
+    },
+    {
+      "name": "ERC-8004",
+      "category": "Trust",
+      "type": "Standard",
+      "description": "On-chain identity, reputation and validation registries for agents. The standard deliberately leaves score calculation to outside systems.",
+      "bestFor": "Portable agent records",
+      "tags": [
+        "identity",
+        "reputation",
+        "validation"
+      ],
+      "caveat": "Raw feedback can be Sybil-vulnerable; a registry is not a trust score.",
+      "source": "https://blockeden.xyz/blog/2026/02/11/nillion-blacklight-ai-agent-verification/"
+    },
+    {
+      "name": "Vouch",
+      "category": "Trust",
+      "type": "Scoring project",
+      "description": "A build-in-public trust layer producing payer and payee scores plus ALLOW, WARN or BLOCK decisions for x402 interactions.",
+      "bestFor": "Exploring pre-payment scoring",
+      "tags": [
+        "x402",
+        "scoring",
+        "payee"
+      ],
+      "caveat": "No dominant paid traction was found.",
+      "source": "https://dev.to/vouch/x402-proves-payment-it-doesnt-prove-trust-so-we-built-vouch-2fen"
+    },
+    {
+      "name": "AgentCredit",
+      "category": "Trust",
+      "type": "Reference project",
+      "description": "An experimental reputation-priced x402 project using zero-knowledge proofs on Base Sepolia.",
+      "bestFor": "Reputation-priced payment research",
+      "tags": [
+        "x402",
+        "ZK",
+        "reputation"
+      ],
+      "caveat": "Experimental; not evidence of a mature paid market.",
+      "source": "https://github.com/lazykid64/agentcredit/blob/HEAD/README.md"
+    },
+    {
+      "name": "SpendVeto",
+      "category": "Control",
+      "type": "Open-source project",
+      "description": "Deterministic spend controls with caps, budgets, approvals, kill switch, idempotency replay, dry-run and time-boxed grants.",
+      "bestFor": "Studying agent spend gates",
+      "tags": [
+        "budgets",
+        "approvals",
+        "idempotency"
+      ],
+      "caveat": "The research found no evidence of paid customers.",
+      "source": "https://github.com/revanthrajeev/spendveto"
+    },
+    {
+      "name": "Virtuals Programmable Wallets",
+      "category": "Control",
+      "type": "Wallet policy",
+      "description": "Server-side wallet policy controls for agents, including restrictive presets such as DENY_ALL and ACP_ONLY.",
+      "bestFor": "Policy-bound agent wallets",
+      "tags": [
+        "wallet",
+        "policy",
+        "prompt injection"
+      ],
+      "caveat": "Wallet-specific rather than a neutral cross-rail control plane.",
+      "source": "https://cryptobriefing.com/virtuals-protocol-agent-wallet-prompt-injection/"
+    },
+    {
+      "name": "MCP Registry / Harbor",
+      "category": "Discovery",
+      "type": "Registry ecosystem",
+      "description": "Indexes MCP servers so builders can discover remote tools. The research cites roughly 9,652 servers in the official registry and 31,486 indexed by Harbor in 2026.",
+      "bestFor": "Finding MCP servers",
+      "tags": [
+        "MCP",
+        "registry",
+        "tool discovery"
+      ],
+      "caveat": "Listing scale is not live-delivery verification.",
+      "source": "https://github.com/lbesecker195/mcp_registry"
+    },
+    {
+      "name": "Agent2Agent (A2A)",
+      "category": "Discovery",
+      "type": "Protocol",
+      "description": "A delegation protocol using Agent Cards and a task lifecycle for agents that need to coordinate across organizations.",
+      "bestFor": "Agent-to-agent delegation",
+      "tags": [
+        "Agent Cards",
+        "delegation",
+        "tasks"
+      ],
+      "caveat": "Different layer from MCP tool calling; negotiation volume remains small.",
+      "source": "https://dev.to/jeff_pdc/a2a-vs-mcp-in-2026-when-agents-should-talk-to-agents-instead-of-calling-tools-4b9g"
+    },
+    {
+      "name": "FetchGate Bazaar Audit",
+      "category": "Discovery",
+      "type": "Audit resource",
+      "description": "A public crawl and audit of x402 Bazaar listings, focused on availability, price, payer counts and listing churn.",
+      "bestFor": "Researching x402 market health",
+      "tags": [
+        "Bazaar",
+        "audit",
+        "x402"
+      ],
+      "caveat": "A dated crawl; it does not prove a paid endpoint currently delivers.",
+      "source": "https://github.com/roblouw2nd/fetchgate/blob/HEAD/content/x402-bazaar-october-2026.md"
+    },
+    {
+      "name": "Mem0",
+      "category": "Memory",
+      "type": "Memory platform",
+      "description": "A prominent long-term memory layer for agents, with a hosted API and integration into the broader agent ecosystem.",
+      "bestFor": "Persistent agent memory",
+      "tags": [
+        "memory",
+        "hosted API",
+        "agents"
+      ],
+      "caveat": "A crowded, well-funded category rather than an empty market.",
+      "source": "https://yourstory.com/ai-story/san-francisco-startup-mem0-raises-24-million-long-term-ai-memory-power"
+    },
+    {
+      "name": "Zep / Graphiti",
+      "category": "Memory",
+      "type": "Memory platform",
+      "description": "Temporal knowledge-graph memory for agents, aimed at retaining and retrieving changing context over time.",
+      "bestFor": "Temporal knowledge graphs",
+      "tags": [
+        "memory",
+        "knowledge graph",
+        "temporal"
+      ],
+      "caveat": "Compared here from secondary research; check current product docs before use.",
+      "source": "https://valueaddvc.com/blog/the-ai-memory-problem-how-startups-are-solving-for-persistent-context"
+    },
+    {
+      "name": "Letta",
+      "category": "Memory",
+      "type": "Agent framework",
+      "description": "An OS-inspired agent memory approach with layered memory and git-backed context repositories described in the 2026 research.",
+      "bestFor": "Stateful agent architectures",
+      "tags": [
+        "memory",
+        "context",
+        "agents"
+      ],
+      "caveat": "Memory infrastructure is already competitive and hyperscaler-bundled.",
+      "source": "https://particula.tech/blog/agent-memory-frameworks-tested-mem0-zep-letta-cognee-2026"
+    },
+    {
+      "name": "Langfuse",
+      "category": "Observability",
+      "type": "Observability",
+      "description": "Open-source tracing and evaluation infrastructure in the crowded agent observability category.",
+      "bestFor": "Tracing and eval workflows",
+      "tags": [
+        "tracing",
+        "evals",
+        "open source"
+      ],
+      "caveat": "Generic observability is a mature, crowded market.",
+      "source": "https://latitude.so/blog/best-ai-agent-observability-tools-2026-comparison"
+    },
+    {
+      "name": "Braintrust",
+      "category": "Observability",
+      "type": "Evaluation platform",
+      "description": "Evaluation-driven tooling for testing and monitoring AI systems, included in the research\u2019s observability comparison set.",
+      "bestFor": "Evaluation pipelines",
+      "tags": [
+        "evals",
+        "monitoring",
+        "testing"
+      ],
+      "caveat": "Check current limits and pricing directly; no live verification was performed.",
+      "source": "https://latitude.so/blog/best-ai-agent-observability-tools-2026-comparison"
+    },
+    {
+      "name": "Daytona",
+      "category": "Sandbox",
+      "type": "Execution sandbox",
+      "description": "Managed execution infrastructure for running agent-generated code in isolated environments.",
+      "bestFor": "Isolated code execution",
+      "tags": [
+        "sandbox",
+        "compute",
+        "agents"
+      ],
+      "caveat": "Capital-intensive and crowded; pricing in the report came from secondary comparisons.",
+      "source": "https://github.com/imtiazrayhan/agentscamp/blob/HEAD/src/content/tools/daytona.md"
+    },
+    {
+      "name": "E2B",
+      "category": "Sandbox",
+      "type": "Execution sandbox",
+      "description": "Cloud sandboxes designed for AI-generated code and computer-use workloads.",
+      "bestFor": "Ephemeral agent environments",
+      "tags": [
+        "sandbox",
+        "code execution",
+        "compute"
+      ],
+      "caveat": "Use the comparison as orientation, then verify current product details directly.",
+      "source": "https://bex.co/blog/2026/10/02/e2b-vs-modal-vs-daytona-agent-sandboxes-vs-app-deploys"
+    },
+    {
+      "name": "Manifest by Manifold",
+      "category": "Security",
+      "type": "Security inventory",
+      "description": "MCP security scoring and asset inventory; the cited research reported 7,700 servers scored and 206,000 assets indexed.",
+      "bestFor": "MCP estate visibility",
+      "tags": [
+        "MCP",
+        "security",
+        "inventory"
+      ],
+      "caveat": "Enterprise agent security is a crowded, funded market.",
+      "source": "https://siliconangle.com/2026/05/12/manifold-scores-7700-mcp-servers-manifest-expansion-aimed-agent-security-teams/"
+    },
+    {
+      "name": "Arcade",
+      "category": "Security",
+      "type": "Tool authorization",
+      "description": "Agent tool authorization infrastructure included in the research\u2019s funded enterprise security set.",
+      "bestFor": "Scoped tool access",
+      "tags": [
+        "authorization",
+        "tools",
+        "security"
+      ],
+      "caveat": "Enterprise-focused; read the vendor profile and current docs before adopting.",
+      "source": "https://github.com/druce/governance/blob/HEAD/wiki/vendors/arcade.md"
+    },
+    {
+      "name": "Aembit",
+      "category": "Identity",
+      "type": "Workload identity",
+      "description": "Access-control infrastructure extending workload identity concepts to personal AI agents.",
+      "bestFor": "Agent access policy",
+      "tags": [
+        "identity",
+        "access",
+        "workloads"
+      ],
+      "caveat": "Identity is crowded and frequently bundled by enterprise platforms.",
+      "source": "https://techstartups.com/2026/10/06/aembit-extends-access-controls-to-personal-ai-agents/"
+    },
+    {
+      "name": "Okta for AI Agents",
+      "category": "Identity",
+      "type": "Enterprise identity",
+      "description": "Enterprise identity and governance controls for agents inside Okta\u2019s broader identity control plane.",
+      "bestFor": "Enterprise agent governance",
+      "tags": [
+        "identity",
+        "governance",
+        "enterprise"
+      ],
+      "caveat": "The cited 2026 analysis says pricing and product details remained unresolved.",
+      "source": "https://www.forrester.com/blogs/oktane-2026-recap-okta-announces-a-unified-iam-control-plane-with-agent-governance-and-identity-details-remaining-unclear/"
+    }
+  ]
+}
