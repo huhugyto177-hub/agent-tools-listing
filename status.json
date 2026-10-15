@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-14",
+  "checked_at": "2026-10-15",
   "source": "automated daily link check (HTTP status only, not a delivery test)",
   "entries": [
     {
@@ -83,8 +83,8 @@
     {
       "name": "Mem0",
       "source": "https://yourstory.com/ai-story/san-francisco-startup-mem0-raises-24-million-long-term-ai-memory-power",
-      "status": "live",
-      "http_status": 200
+      "status": "unknown",
+      "http_status": 403
     },
     {
       "name": "Zep / Graphiti",
