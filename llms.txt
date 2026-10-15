@@ -1,4 +1,4 @@
-# Agent Tools Listing
+# AgentToolsAtlas
 
 > A research-linked directory of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents.
 > Snapshot: October 14, 2026. Entries are research-linked, not live-verified.
