@@ -1,7 +1,7 @@
 # AgentToolsAtlas
 
 > A research-linked directory of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents.
-> Snapshot: October 14, 2026. Entries are research-linked, not live-verified.
+> Updated daily. Entries are research-linked, not live-verified. Source links re-checked daily — see status.json for the last check.
 > Machine-readable catalog: https://agent-tools-listing.vercel.app/catalog.json
 
 ## Catalog

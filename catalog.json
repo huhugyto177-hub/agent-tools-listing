@@ -1,7 +1,6 @@
 {
   "schema": "agent-tools-catalog/1.0",
-  "snapshot_date": "2026-10-14",
-  "verification": "research-linked, not live-verified",
+  "verification": "research-linked, links re-checked daily (HTTP status only, not a delivery test)",
   "count": 24,
   "tools": [
     {
@@ -344,5 +343,6 @@
   "last_checked": "2026-10-16",
   "name": "AgentToolsAtlas",
   "site": "https://agent-tools-listing.vercel.app/",
-  "description": "AgentToolsAtlas \u2014 a research-linked directory of agent tools, protocols, and platforms for AI agents. 24 entries, dated snapshot October 14, 2026."
+  "description": "AgentToolsAtlas \u2014 a research-linked directory of agent tools, protocols, and platforms for AI agents. 24 entries, links re-checked daily.",
+  "updated": "daily"
 }
