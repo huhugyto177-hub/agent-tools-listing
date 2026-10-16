@@ -6,16 +6,16 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" href="data:," />
   <title>AgentToolsAtlas — Agent Tools Catalog | Research-Linked Directory for AI Agents</title>
-  <meta name="description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, dated snapshot." />
+  <meta name="description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, links re-checked daily." />
   <link rel="canonical" href="https://agent-tools-listing.vercel.app/" />
   <link rel="alternate" type="application/json" title="Machine-readable catalog" href="/catalog.json" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AgentToolsAtlas — Agent Tools Catalog | Research-Linked Directory for AI Agents" />
-  <meta property="og:description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, dated snapshot." />
+  <meta property="og:description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, links re-checked daily." />
   <meta property="og:url" content="https://agent-tools-listing.vercel.app/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="AgentToolsAtlas — Agent Tools Catalog | Research-Linked Directory for AI Agents" />
-  <meta name="twitter:description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, dated snapshot." />
+  <meta name="twitter:description" content="AgentToolsAtlas — a research-linked atlas of protocols, infrastructure, memory, security, trust, and discovery tools for AI agents. 24 entries, links re-checked daily." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -221,10 +221,10 @@
     <section class="hero reveal">
       <div class="hero-grid">
         <div>
-          <p class="hero-eyebrow">OPEN CATALOG &middot; OCTOBER 2026 SNAPSHOT &middot; RESEARCH-LINKED</p>
+          <p class="hero-eyebrow">OPEN CATALOG &middot; CHECKED DAILY &middot; RESEARCH-LINKED</p>
           <h1>Agent<br/>Tools<br/>Atlas</h1>
           <p class="hero-intro">The clear atlas of tools for AI agents — every entry research-linked, nothing invented.</p>
-          <p class="hero-para">AgentToolsAtlas is a compact, research-linked field guide to agent tools, protocols, and platforms across payments, memory, security, trust, and discovery. Each of the 24 entries points to the source used for this October 14 snapshot.</p>
+          <p class="hero-para">AgentToolsAtlas is a compact, research-linked field guide to agent tools, protocols, and platforms across payments, memory, security, trust, and discovery. Every entry links to its source, and every source link is re-checked daily. If a source goes dark, it gets flagged — not silently kept.</p>
           <p class="hero-para">It is not a live uptime claim or a paid-delivery test. Use it to choose like an operator: define the exact use-when, check the current contract, cap spend outside the prompt, and test the second call before production.</p>
         </div>
         <figure class="hero-figure">
@@ -233,10 +233,10 @@
         </figure>
       </div>
     </section>
-    <section class="statstrip reveal" aria-label="Market snapshot">
-      <div class="stat"><b>34,062</b><span>x402 Bazaar resources reported on Oct 9; scale does not imply quality. <a href="http://dev.to/tanod/state-of-the-x402-bazaar-34062-listings-2158-hosts-and-94-missing-a-use-when-line-34co" target="_blank" rel="noopener">Source</a></span></div>
-      <div class="stat"><b>53.3%</b><span>of listings in one October crawl still answered with a live 402, down from 77.5% in August. <a href="https://github.com/roblouw2nd/fetchgate/blob/HEAD/content/x402-bazaar-october-2026.md" target="_blank" rel="noopener">Source</a></span></div>
-      <div class="stat"><b>0 / 12</b><span>frameworks surveyed documented a currency budget, idempotency, or a built-in argument-level audit trail. <a href="http://dev.to/quinn_854b15f517d8632ed4f/pink-data-which-ai-agent-frameworks-can-stop-an-agent-from-overspending-a-12-framework-survey-624" target="_blank" rel="noopener">Source</a></span></div>
+    <section class="statstrip reveal" aria-label="Catalog health, updated daily">
+      <div class="stat"><b id="statEntries">24</b><span>Research-linked entries across payments, trust, control, discovery, memory, observability, sandbox, security, and identity.</span></div>
+      <div class="stat"><b id="statLive">—</b><span>Source links live at the last daily check. Dead links get flagged, not silently kept. <a href="/status.json" target="_blank" rel="noopener">See status</a></span></div>
+      <div class="stat"><b id="statChecked">—</b><span>Last daily link check. This page is maintained daily, not frozen on a snapshot date.</span></div>
     </section>
   </div>
 
@@ -270,8 +270,8 @@
         <p class="guide-intro">A listing tells you what exists. Before wiring anything into a production agent, run the checks that discovery pages usually skip.</p>
       </div>
       <div class="checklist">
-        <div class="check"><div><strong>Define the exact “use when.”</strong><span>Write the task, inputs, expected output and stop condition before selecting a tool. One October Bazaar snapshot found 94% of listings missing a “use when” line.</span></div></div>
-        <div class="check"><div><strong>Check the current response contract.</strong><span>Confirm version, auth, schemas, errors and timeouts against the tool’s current documentation. This catalog is a dated snapshot, not an uptime monitor.</span></div></div>
+        <div class="check"><div><strong>Define the exact “use when.”</strong><span>Write the task, inputs, expected output and stop condition before selecting a tool. One Bazaar audit found 94% of listings missing a “use when” line.</span></div></div>
+        <div class="check"><div><strong>Check the current response contract.</strong><span>Confirm version, auth, schemas, errors and timeouts against the tool’s current documentation. This catalog is maintained daily, not frozen — but it is still not an uptime monitor.</span></div></div>
         <div class="check"><div><strong>Cap spend outside the prompt.</strong><span>Use deterministic limits, idempotency and a human threshold. Model instructions alone are not a reliable money-control boundary.</span></div></div>
         <div class="check"><div><strong>Test the second call.</strong><span>One successful response does not establish repeatability. Probe retries, duplicate requests, changed prices and changed payees before production.</span></div></div>
         <div class="check"><div><strong>Keep an outcome receipt.</strong><span>Record instruction, authorization, intent, decision and outcome so a failure can be reconstructed later.</span></div></div>
@@ -281,13 +281,13 @@
     <section class="method reveal" aria-labelledby="method-title">
       <h2 id="method-title">Method &amp; limits</h2>
       <div>
-        <p>This catalog is built from web research completed October 14, 2026. Entries are included because the research identified them as concrete protocols, projects or product categories—not because this page independently verified current uptime, security, pricing or availability.</p>
+        <p>This catalog is maintained daily. Source links are re-checked every day at 09:00 UTC, and entries are added or removed weekly after verification against a live source. Entries are included because research identified them as concrete protocols, projects or product categories — not because this page independently verified current uptime, security, pricing or availability.</p>
         <p>Market figures vary sharply by methodology. For x402, estimates of genuine trade differed by roughly an order of magnitude; headline transaction counts should not be read as proven buyer demand. See the <a href="https://startupfortune.com/ai-agents-have-moved-over-200-million-payments-on-x402-but-half-may-be-fake/" target="_blank" rel="noopener">volume analysis</a> and the <a href="https://github.com/roblouw2nd/fetchgate/blob/HEAD/content/x402-bazaar-october-2026.md" target="_blank" rel="noopener">October Bazaar audit</a>.</p>
       </div>
     <section class="hooks reveal" aria-labelledby="hooks-title">
       <div>
         <h2 id="hooks-title">For agents</h2>
-        <p>Fetch the full catalog without scraping this page. The JSON file holds the same 24 entries, with sources.</p>
+        <p>Fetch the full catalog without scraping this page. The JSON file holds the same entries, with sources — refreshed on every daily check.</p>
         <pre>curl https://agent-tools-listing.vercel.app/catalog.json</pre>
         <div class="hook-links">
           <a href="/catalog.json">catalog.json</a>
@@ -306,7 +306,7 @@
     </section>
   </main>
 
-  <footer><div class="shell"><span>CATALOG SNAPSHOT · 2026-10-14</span><span id="lastChecked">LAST CHECKED · —</span><span>LINKS OPEN TO ORIGINAL RESEARCH SOURCES</span></div></footer>
+  <footer><div class="shell"><span>CHECKED DAILY</span><span id="lastChecked">LAST CHECKED · —</span><span>LINKS OPEN TO ORIGINAL RESEARCH SOURCES</span></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -519,7 +519,8 @@
     function machineCatalog(items) {
       return {
         schema: "agent-tools-catalog/1.0",
-        snapshot_date: "2026-10-14",
+        updated: "daily",
+        last_checked: "see status.json",
         verification: "research-linked, not live-verified",
         count: items.length,
         tools: items.map(({short, ...rest}) => rest)
@@ -581,7 +582,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "agenttoolsatlas-catalog-2026-10-14.json";
+      a.download = "agenttoolsatlas-catalog.json";
       a.click();
       URL.revokeObjectURL(url);
       notify("JSON catalog downloaded");
@@ -593,7 +594,7 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "AgentToolsAtlas — Research-linked AI agent tools catalog",
-      "dateModified": "2026-10-14",
+      "dateModified": "daily",
       "numberOfItems": tools.length,
       "itemListElement": tools.map((t, i) => ({"@type": "ListItem", "position": i + 1, "name": t.name, "url": t.source}))
     });
@@ -616,6 +617,14 @@
         .then(data => {
           if (!data) return;
           document.getElementById("lastChecked").textContent = "LAST CHECKED · " + data.checked_at;
+          const live = (data.entries || []).filter(e => e.status === "live").length;
+          const total = (data.entries || []).length;
+          const liveEl = document.getElementById("statLive");
+          const checkedEl = document.getElementById("statChecked");
+          const entriesEl = document.getElementById("statEntries");
+          if (liveEl && total) liveEl.textContent = live + " / " + total;
+          if (checkedEl) checkedEl.textContent = data.checked_at;
+          if (entriesEl && total) entriesEl.textContent = total;
           (data.entries || []).forEach(e => { linkStatus[e.name] = e.status; });
           render();
         })
